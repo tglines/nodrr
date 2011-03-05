@@ -24,9 +24,9 @@ mongoStore = require('connect-mongodb');
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.bodyDecoder());
+  app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieDecoder());
+  app.use(express.cookieParser());
   app.use(express.session({
     store: mongoStore({
       dbname: 'sessions',
@@ -39,7 +39,7 @@ app.configure(function(){
   app.use(auth([
     auth.Facebook({appId : fbId, appSecret: fbSecret, scope : "email", callback: fbCallbackAddress})
   ]));
-  app.use(express.staticProvider(__dirname + '/public'));
+  app.use(express.static(__dirname + '/public'));
   app.use(app.router);
 });
 
