@@ -1,7 +1,7 @@
 app.get('/', function(req, res){
   loadAccount(req,function(account){
-    res.render('home', {
-      locals: { title: 'Nodrr', account: account }
-    });
+    res.local('account', account);
+    res.local('title', 'Nodrr');
+    res.render('home');
   });
 });
