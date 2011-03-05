@@ -19,6 +19,8 @@ Nod = mongoose.model('Nod');
 connect = require('connect');
 auth = require('connect-auth');
 
+require('./fb_creds.js');
+
 mongoStore = require('connect-mongodb');
 
 app.configure(function(){
