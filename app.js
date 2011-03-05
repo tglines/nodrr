@@ -21,7 +21,7 @@ auth = require('connect-auth');
 
 require('./fb_creds.js');
 
-mongoStore = require('connect-mongodb');
+//mongoStore = require('connect-mongodb');
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -30,11 +30,11 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({
-    store: mongoStore({
-      dbname: 'sessions',
-      username: '',
-      password: ''
-    }),
+    //store: mongoStore({
+    //  dbname: 'sessions',
+    //  username: '',
+   //   password: ''
+   // }),
     secret: 'nodrrsecret'
   }));
   app.use(express.logger({ format: ':date :remote-addr :method :status :url' }));
