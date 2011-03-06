@@ -61,8 +61,7 @@ var loadFacebookAccount = function(facebook_details,loadCallback){
     else{
       var n = new Account();
       n.email = facebook_details.user.email;
-      n.username = 'newuser';
-      n.type = 2;
+      n.type = 1;
       n.facebook_id = facebook_details.user.id;
       n.date = new Date();
       n.save(function(err){
@@ -90,6 +89,8 @@ require('./global_funcs.js');
 
 // Routes ( Controllers )
 require('./controllers/home.js');
+require('./controllers/auth.js');
+require('./controllers/edit.js');
 
 //Only listen on $ node app.js   
 if (!module.parent) {              

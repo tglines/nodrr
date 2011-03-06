@@ -6,6 +6,17 @@ html(lang="en")
     link(rel='stylesheet',type='text/css',href='/css/style.css')
     script(type='text/javascript',src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js')
     script(type='text/javascript',src='/js/main.js')
+    script(type='text/javascript',src='http://static.ak.fbcdn.net/connect/en_US/core.js')
   body
     div.center
-      != body
+      -if(account && account.username)
+        div(style='float:right;')=account.username
+      -else if(!account)
+        div#facebook_login(style='position:relative;float:right;width:200px;padding-top:10px;')
+          div#fb-login.fb_button(style='float:left; background-position: left -188px')                
+            a.fb_button_medium(href='/auth/facebook')
+              span#fb_login_text.fb_button_text Connect with Facebook
+      h1 
+        a(href='/',style='color:#B9C949;') Nodrr
+      div
+        != body
