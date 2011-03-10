@@ -7,4 +7,4 @@ View each branchname using the command
     
     git branch -a 
 
-Live blog at (http://www.travisglines.com/web-coding/lets-make-a-twitter-clone-in-node-js)[travisglines]
+Live blog at [travisglines](http://www.travisglines.com/web-coding/lets-make-a-twitter-clone-in-node-js)
