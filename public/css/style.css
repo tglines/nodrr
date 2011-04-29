@@ -5,17 +5,20 @@ html,body{
 }
 
 div.center{
-  width:1000px;
+  width:640px;
   margin-left: auto;
   margin-right: auto;
   position:relative;
 }
 
 h1{
-  color:#B9C949;
   font-family: Helvetica, sans-serif;
   font-weight:bold;
   font-size:40px;
   padding-top:10px;
   padding-bottom:10px;
+}
+
+div.center a{
+  color:#B9C949;
 }

@@ -10,12 +10,17 @@ html(lang="en")
   body
     div.center
       -if(account && account.username)
-        div(style='float:right;')=account.username
+        div(style='float:right;margin-top:20px;position:relative;left:-60px;')
+          a(href='/'+account.username,style='margin-right:20px;')=account.username
+          a(href='/logout') Logout
       -else if(!account)
         div#facebook_login(style='position:relative;float:right;width:200px;padding-top:10px;')
           div#fb-login.fb_button(style='float:left; background-position: left -188px')                
             a.fb_button_medium(href='/auth/facebook')
               span#fb_login_text.fb_button_text Connect with Facebook
+      h2 
+        span Check out my startup (also using node.js) @ 
+        a(href='http://www.exipe.com',style='color:#B9C949;') Exipe.com
       h1 
         a(href='/',style='color:#B9C949;') Nodrr
       div

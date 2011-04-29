@@ -91,6 +91,8 @@ require('./global_funcs.js');
 require('./controllers/home.js');
 require('./controllers/auth.js');
 require('./controllers/edit.js');
+require('./controllers/nod.js');
+require('./controllers/user.js');
 
 //Only listen on $ node app.js   
 if (!module.parent) {              

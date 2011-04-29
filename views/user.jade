@@ -1,4 +1,6 @@
--if(account && account.username)
+h2(style='font-weight:bold;font-size:20px;text-align:center;')='@'+user.username
+
+-if(account && account.username && account.username == user.username)
   h2(style='font-weight:bold;padding-bottom:5px;') Whats going on?
   form(action='/nod',method='post')
     textarea(name='nod',style='width:550px;')
