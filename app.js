@@ -52,7 +52,7 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.errorHandler());
 });
-
+// testing
 var loadFacebookAccount = function(facebook_details,loadCallback){
   Account.findOne({ facebook_id: facebook_details.user.id }, function(err,account){
     if(account){
