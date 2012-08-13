@@ -1,0 +1,18 @@
+{
+  "name": "nodrr",
+  "version": "0.0.1",
+  "dependencies": {
+	"express": "2.5.x",
+	"jade": "0.27.x",
+	"zlib": "1.0.x",
+	"connect-force-domain": "0.0.x",
+	"mongoose": "3.0.x",
+	"connect": "1.9.x",
+	"connect-auth": "0.4.x",
+	"oauth": "0.9.x"
+  },
+  "engines": {
+	"node": "0.8.x",
+	"npm": "1.1.x"
+  }
+}
